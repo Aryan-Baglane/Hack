@@ -1,12 +1,41 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { Navigation } from "@/components/Navigation";
+import { Hero } from "@/components/Hero";
+import { Features } from "@/components/Features";
+import { UseCases } from "@/components/UseCases";
+import { TechStack } from "@/components/TechStack";
+import { Footer } from "@/components/Footer";
+import Dashboard from "./Dashboard";
 
 const Index = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  if (isLoggedIn) {
+    return (
+      <>
+        <Navigation isLoggedIn={isLoggedIn} onLogin={handleLogin} onLogout={handleLogout} />
+        <Dashboard />
+      </>
+    );
+  }
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navigation isLoggedIn={isLoggedIn} onLogin={handleLogin} onLogout={handleLogout} />
+      <Hero onGetStarted={handleLogin} />
+      <Features />
+      <UseCases />
+      <TechStack />
+      <Footer />
     </div>
   );
 };
