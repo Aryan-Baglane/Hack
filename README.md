@@ -62,7 +62,28 @@ This project is built with:
 
 ## How can I deploy this project?
 
+**Deploy to Lovable**
+
 Simply open [Lovable](https://lovable.dev/projects/26fbb4c1-2d50-47ed-93f3-11ede77ce950) and click on Share -> Publish.
+
+**Deploy to Render**
+
+This project is configured for easy deployment on Render:
+
+1. Push your code to GitHub
+2. Go to [Render Dashboard](https://dashboard.render.com/)
+3. Click "New +" and select "Web Service"
+4. Connect your GitHub repository
+5. Render will automatically detect the `render.yaml` configuration
+6. Click "Create Web Service"
+
+Your app will be automatically built and deployed!
+
+Alternatively, you can use the manual setup:
+
+- Build Command: `npm install && npm run build`
+- Start Command: `npm start`
+- Environment: Node
 
 ## Can I connect a custom domain to my Lovable project?
 
