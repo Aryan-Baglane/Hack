@@ -8,6 +8,9 @@ import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dashboard";
 import Querypage from "./pages/Querypage";
 import { withAuthenticationRequired } from "@auth0/auth0-react";
+import Visualizer from "./pages/Visualizer";
+import Talk2db from "./pages/Talk2db";
+import Talk2bigdb from "./pages/Talk2bigdb";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +34,9 @@ const App = () => (
 
           {/* ✅ Protected route */}
           <Route path="/Querypage" element={<Querypage />} />
+          <Route path="/Visualizer" element={<Visualizer />} />
+          <Route path="/Talk2db" element={<Talk2db />} />
+          <Route path="/Talk2bigdb" element={<Talk2bigdb />} />
 
           {/* ✅ Catch-all */}
           <Route path="*" element={<NotFound />} />
