@@ -31,7 +31,7 @@ export const Hero = () => {
 
         {/* Subtext */}
         <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-600 md:text-xl animate-in fade-in slide-in-from-bottom duration-700 delay-200">
-          Stop querying. Start asking. DataQuery AI unlocks your company's MongoDB data with plain English.
+          Stop querying. Start asking. Database Copilot AI unlocks your company's MongoDB data with plain English.
           No code, no queries, just answers.
         </p>
 

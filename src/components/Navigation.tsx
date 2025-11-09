@@ -26,7 +26,7 @@ export const Navigation = () => {
           <div className="h-10 w-10 rounded-xl gradient-primary flex items-center justify-center shadow-glow transition-all duration-300 group-hover:scale-110">
             <Database className="h-5 w-5 text-white" />
           </div>
-          <span className="text-2xl font-bold text-foreground">DataQuery AI</span>
+          <span className="text-2xl font-bold text-foreground">Database Copilot</span>
         </NavLink>
 
         {/* Navigation Links */}
